@@ -4,6 +4,12 @@
 System.Console.WriteLine("enter the number: ");
 int number = int.Parse(Console.ReadLine());
 
-if(number > 99){
-    
+if((number/10)<99){
+    System.Console.WriteLine($"Третьей цифры нет"); 
+}
+else{
+    while((number/10)>99){
+       number = (number / 10);
+    }
+    System.Console.WriteLine($"Третья цифра = {number%10}");
 }
